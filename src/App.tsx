@@ -1,8 +1,5 @@
+import React from 'react'
 
-function App() {
-  return (
-    <header>Sneakers Store</header>
-  );
-}
+const App: React.FC = () => <header>Sneakers Store</header>
 
-export default App;
+export default App
