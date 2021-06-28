@@ -1,0 +1,84 @@
+@import '../../sass/variables.scss';
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 128px;
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 128px;
+    width: 100%;
+    border-bottom: 1px solid $color-divider;
+  }
+
+  &-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-height: 40px;
+
+    &__logo {
+      margin-right: 16px;
+      cursor: pointer;
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &__title {
+      margin: 0;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 24px;
+      text-transform: uppercase;
+      color: $color-black;
+    }
+
+    &__subtitle {
+      margin: 0;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 17px;
+      color: $color-gray;
+    }
+  }
+
+  &-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    li:not(:last-child) {
+      margin-right: 30px;
+    }
+    li {
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+
+    &__cart {
+      display: flex;
+      align-items: center;
+      margin-right: 30px;
+      img {
+        margin-right: 10px;
+      }
+      span {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        color: $color-gray-dark;
+      }
+    }
+  }
+}
